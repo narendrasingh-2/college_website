@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link href="/src/boostrapcss/bootstrap.min.css" rel="stylesheet" />
+  <script src="/src/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/src/css/custom.css" />
+</head>
+
+<body>
+  <header class="sticky-top shadow-sm" style="
+        background-color: white;
+        background: url(/src/images/bg_header.png) no-repeat;
+        background-size: cover
+      ">
+    <div class="container p-0">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center p-4" style="">
+          <a href="/" class="d-flex align-items-center">
+            <img src="/src/images/image.png" alt="SHRI BAPU JI GROUP OF EDUCATION Logo" width="114" height="33"
+              class="img-thumbnails" />
+          </a>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-end w-100 gap-2 pe-3 pe-md-0">
+          <nav class="navbar navbar-expand-md p-0 d-none d-xl-flex">
+            <div class="collapse navbar-collapse show" id="navbarNav">
+              <ul class="navbar-nav gap-2">
+                <li class="nav-item">
+                  <a href="/" class="nav-link px-3 d-flex align-items-center h-100 fw-bold"
+                    style="color: #001e43">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="/about_us" class="nav-link px-3 d-flex align-items-center h-100" style="color: #001e43">About
+                    Us</a>
+                </li>
+
+                <li class="nav-item dropdown d-flex align-items-center">
+                  <a class="nav-link dropdown-toggle px-3" href="#" id="departmentsDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="color: #001e43">
+                    Departments
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                    <li>
+                      <a class="dropdown-item" href="/departments/item1">Department Item 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/departments/item2">Department Item 2</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown d-flex align-items-center">
+                  <a class="nav-link dropdown-toggle px-3" href="#" id="admissionsDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="color: #001e43">
+                    Admissions
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="admissionsDropdown">
+                    <li>
+                      <a class="dropdown-item" href="/admissions/procedure">Procedure</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/admissions/apply">Apply Now</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a href="/contact" class="nav-link px-3 d-flex align-items-center h-100"
+                    style="color: #001e43">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center">
+            <button class="btn btn-circle p-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu" aria-label="Toggle menu" style="
+                  position: relative;
+                  background-color: rgba(255, 195, 51, 1);
+                ">
+              <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.5 1.57143C5.5 0.979715 5.99251 0.5 6.6 0.5H20.9C21.5075 0.5 22 0.979715 22 1.57143C22 2.16314 21.5075 2.64286 20.9 2.64286H6.6C5.99251 2.64286 5.5 2.1631 5.5 1.57143ZM20.9 6.92857H1.1C0.492508 6.92857 0 7.40833 0 8C0 8.59171 0.492508 9.07143 1.1 9.07143H20.9C21.5075 9.07143 22 8.59171 22 8C22 7.40833 21.5075 6.92857 20.9 6.92857ZM20.9 13.3571H11C10.3926 13.3571 9.9 13.8369 9.9 14.4286C9.9 15.0202 10.3926 15.5 11 15.5H20.9C21.5075 15.5 22 15.0202 22 14.4286C22 13.8369 21.5075 13.3571 20.9 13.3571Z"
+                  fill="#001E43" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header text-white p-3" style=" background-color: rgba(0, 30, 67, 1);;">
+      <h5 class="offcanvas-title d-flex align-items-center" id="contactInfoLabel">
+        <span style="font-size: 1.5rem; margin-right: 10px">
+          <svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M40.399 8.54657L21.5103 0.561256C21.3649 0.499013 21.2084 0.466919 21.0503 0.466919C20.8921 0.466919 20.7356 0.499013 20.5903 0.561256L1.60806 8.51782C1.39439 8.61202 1.21262 8.76616 1.08477 8.96156C0.956915 9.15697 0.888462 9.38525 0.887702 9.61876C0.886941 9.85228 0.953906 10.081 1.08048 10.2772C1.20706 10.4735 1.38783 10.6288 1.60088 10.7244C2.72285 11.2052 9.29006 13.9602 10.2115 14.3613L20.5903 18.7384C20.8861 18.8565 21.2163 18.8539 21.5103 18.7313C24.8453 17.3239 33.4516 13.6856 36.6543 12.3272C36.6471 13.217 36.6601 20.7193 36.6543 21.8075C35.2269 22.1676 34.6468 24.6013 35.4468 25.9188L34.3903 30.6625C34.3567 30.8048 34.3684 30.9541 34.4239 31.0894C34.4793 31.2247 34.5756 31.3393 34.6993 31.4172C34.8221 31.4976 34.9669 31.538 35.1136 31.5329C35.2603 31.5277 35.4018 31.4773 35.5187 31.3884C36.0297 31.011 36.6445 30.8002 37.2796 30.7847C37.9554 30.7747 38.6153 30.9896 39.1556 31.3956C39.2771 31.4815 39.4221 31.5279 39.571 31.5286C39.7198 31.5293 39.8652 31.4843 39.9876 31.3996C40.11 31.3149 40.2034 31.1946 40.2551 31.055C40.3068 30.9155 40.3144 30.7634 40.2768 30.6194L38.9328 25.8972C39.6242 24.7113 39.2483 22.5816 38.0918 21.9872C38.0983 20.8897 38.0875 12.5874 38.0918 11.7234L40.399 10.7459C40.6113 10.651 40.7916 10.4967 40.9181 10.3015C41.0446 10.1064 41.1119 9.87881 41.1119 9.64626C41.1119 9.4137 41.0446 9.18612 40.9181 8.99098C40.7916 8.79585 40.6113 8.6415 40.399 8.54657Z"
+              fill="white" />
+            <path
+              d="M20.03 20.061C19.1647 19.6959 9.30773 15.53 8.77441 15.31V22.3107C8.77932 22.6865 8.87542 23.0556 9.05445 23.3861C9.23348 23.7166 9.49009 23.9987 9.80223 24.2082C12.9622 26.3564 16.6706 27.556 20.49 27.6654C24.6753 27.7485 28.7859 26.5497 32.2704 24.2297C32.5903 24.0193 32.8539 23.7337 33.0381 23.3979C33.2222 23.0622 33.3214 22.6864 33.3269 22.3035V15.3029C32.8281 15.5192 22.9173 19.703 22.0713 20.061C21.4175 20.3304 20.6838 20.3304 20.03 20.061Z"
+              fill="#FFC333" />
+          </svg>
+        </span>
+        Shri Bapuji Group of Education
+      </h5>
+      <button type="button" class="btn btn-close rounded-circle bg-white text-white" data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="navbar navbar-expand-md p-0 d-flex d-lg-none flex-column mb-4>
+        <div class=" collapse navbar-collapse show w-100 flex-grow-0" id="navbarNav">
+        <ul class="navbar-nav gap-2 flex-column align-items-start justify-content-start w-100">
+          <li class="nav-item w-100">
+            <a href="/" class="nav-link px-3 d-flex align-items-center h-100 fw-bold" style="color: #001e43">Home</a>
+          </li>
+
+          <li class="nav-item w-100">
+            <a href="/about_us" class="nav-link px-3 d-flex align-items-center h-100" style="color: #001e43">About
+              Us</a>
+          </li>
+
+          <li class="nav-item w-100 dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" id="departmentsDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" style="color: #001e43">
+              Departments
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+              <li>
+                <a class="dropdown-item" href="/departments/item1">Department Item 1</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/departments/item2">Department Item 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item w-100 dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" id="admissionsDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" style="color: #001e43">
+              Admissions
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="admissionsDropdown">
+              <li>
+                <a class="dropdown-item" href="/admissions/procedure">Procedure</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/admissions/apply">Apply Now</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item w-100">
+            <a href="/contact" class="nav-link px-3 d-flex align-items-center h-100" style="color: #001e43">Contact
+              Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <div class="my-4">
+          <h6 class="text-uppercase fw-bold text-dark d-flex align-items-center mb-2">
+            <span style="font-size: 1.2rem; margin-right: 10px">
+              <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.99979 0C3.60645 0 0.0322266 3.57423 0.0322266 7.96752C0.0322266 13.4197 7.16242 21.4239 7.46599 21.762C7.75113 22.0796 8.24897 22.079 8.53359 21.762C8.83717 21.4239 15.9674 13.4197 15.9674 7.96752C15.9673 3.57423 12.3931 0 7.99979 0ZM7.99979 11.9762C5.78939 11.9762 3.99115 10.1779 3.99115 7.96752C3.99115 5.75712 5.78944 3.95888 7.99979 3.95888C10.2101 3.95888 12.0084 5.75717 12.0084 7.96757C12.0084 10.178 10.2101 11.9762 7.99979 11.9762Z"
+                  fill="#001E43" />
+              </svg>
+
+            </span>
+            Address
+          </h6>
+          <p class="text-muted ps-4 mb-0">
+            Education Complex, 123 Knowledge Park Road Academic Nagar, Jaipur
+            - 302029 Jaipur, India
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h6 class="text-uppercase fw-bold text-dark d-flex align-items-center mb-3">
+            <span style="font-size: 1.2rem; margin-right: 10px">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.2077 15.06C18.6068 14.5561 15.0827 12.3244 14.4969 12.4269C14.2219 12.4757 14.0116 12.7101 13.4485 13.3818C13.1881 13.7124 12.9021 14.0221 12.5932 14.3079C12.0273 14.1712 11.4795 13.9681 10.9611 13.7029C8.92838 12.7132 7.28618 11.0705 6.29713 9.0375C6.03191 8.51917 5.82884 7.97134 5.69213 7.40538C5.97794 7.09648 6.28758 6.81052 6.61819 6.55013C7.28919 5.98706 7.52431 5.77806 7.57313 5.50169C7.67556 4.91456 5.44188 1.39181 4.94 0.790938C4.72963 0.542063 4.5385 0.375 4.29375 0.375C3.58425 0.375 0.375 4.34325 0.375 4.8575C0.375 4.89944 0.44375 9.03063 5.66119 14.3388C10.9694 19.5563 15.1006 19.625 15.1425 19.625C15.6567 19.625 19.625 16.4157 19.625 15.7062C19.625 15.4615 19.4579 15.2704 19.2077 15.06ZM14.8125 9.3125H16.1875C16.1859 7.85431 15.6059 6.45632 14.5748 5.42522C13.5437 4.39413 12.1457 3.81414 10.6875 3.8125V5.1875C11.7812 5.18859 12.8298 5.62354 13.6031 6.39689C14.3765 7.17024 14.8114 8.21882 14.8125 9.3125Z"
+                  fill="#001E43" />
+                <path
+                  d="M18.25 9.3125H19.625C19.6223 6.94297 18.6798 4.67126 17.0043 2.99575C15.3287 1.32023 13.057 0.377729 10.6875 0.375V1.75C12.6925 1.75237 14.6147 2.54989 16.0324 3.96762C17.4501 5.38535 18.2476 7.30753 18.25 9.3125Z"
+                  fill="#001E43" />
+              </svg>
+
+            </span>
+            Phone Numbers
+          </h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="tel:+919783946431" class="btn btn-warning rounded-pill fw-bold text-decoration-none">+91
+              9783946431</a>
+            <a href="tel:+917011619281" class="btn btn-warning rounded-pill fw-bold text-decoration-none">+91
+              7011619281</a>
+            <a href="tel:+919602077096" class="btn btn-warning rounded-pill fw-bold text-decoration-none">+91
+              9602077096</a>
+            <a href="tel:+919887502920" class="btn btn-warning rounded-pill fw-bold text-decoration-none">+91
+              9887502920</a>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h6 class="text-uppercase fw-bold text-dark d-flex align-items-center mb-3">
+            <span style="font-size: 1.2rem; margin-right: 10px">
+              <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.7099 8.11946L20.5034 1.13006C20.2649 0.990991 19.994 0.917303 19.718 0.916443H2.28166C2.00563 0.917303 1.73471 0.990991 1.49626 1.13006L9.28954 8.11946C9.75262 8.5546 10.3642 8.79685 10.9996 8.79685C11.635 8.79685 12.2468 8.5546 12.7099 8.11946ZM21.1687 1.8037L15.1088 7.2388L21.2131 14.1138C21.3695 13.8104 21.4507 13.4739 21.4498 13.1326V2.8674C21.4513 2.49434 21.3543 2.1275 21.1687 1.80392V1.8037ZM0.830982 1.8037C0.645283 2.12735 0.548296 2.49427 0.549822 2.8674V13.1326C0.548935 13.4739 0.630123 13.8104 0.786542 14.1138L6.89088 7.2388L0.830982 1.8037Z"
+                  fill="#001E43" />
+                <path
+                  d="M13.2601 8.89692C11.9898 10.0904 10.0107 10.0904 8.74043 8.89692L7.58609 7.86182L1.41113 14.8169C1.66898 14.9895 1.97203 15.0823 2.28233 15.0835H19.7182C20.0285 15.0823 20.3316 14.9895 20.5894 14.8169L14.4147 7.86182L13.2601 8.89692Z"
+                  fill="#001E43" />
+              </svg>
+
+
+            </span>
+            Email Address
+          </h6>
+          <a href="mailto:email@example.com" class="text-muted ps-4 text-decoration-none">email@example.com</a>
+        </div>
+
+        <div class="d-flex flex-row gap-3 my-3">
+          <button type="button"
+            class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+            style="height: 46px; width: 46px; background: rgb(38, 38, 38)">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.88805 10.1437H0.710047C0.358047 10.1437 0.248047 10.0117 0.248047 9.68168V7.01968C0.248047 6.66768 0.380047 6.55768 0.710047 6.55768H2.88805V4.62168C2.88805 3.74168 3.04205 2.90568 3.48205 2.13568C3.94405 1.34368 4.60405 0.815679 5.44005 0.507679C5.99005 0.30968 6.54005 0.22168 7.13405 0.22168H9.29005C9.59805 0.22168 9.73005 0.35368 9.73005 0.66168V3.16968C9.73005 3.47768 9.59805 3.60968 9.29005 3.60968C8.69605 3.60968 8.10205 3.60968 7.50805 3.63168C6.91405 3.63168 6.60605 3.91768 6.60605 4.53368C6.58405 5.19368 6.60605 5.83168 6.60605 6.51368H9.15805C9.51005 6.51368 9.64205 6.64568 9.64205 6.99768V9.65968C9.64205 10.0117 9.53205 10.1217 9.15805 10.1217H6.60605V17.2937C6.60605 17.6677 6.49605 17.7997 6.10005 17.7997H3.35005C3.02005 17.7997 2.88805 17.6677 2.88805 17.3377V10.1437Z"
+                fill="white" />
+            </svg>
+          </button>
+          <button type="button"
+            class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+            style="height: 46px; width: 46px; background: rgb(38, 38, 38)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5834 0.833008H5.41671C2.88671 0.833008 0.833374 2.88634 0.833374 5.41634V14.583C0.833374 17.113 2.88671 19.1663 5.41671 19.1663H14.5834C17.1134 19.1663 19.1667 17.113 19.1667 14.583V5.41634C19.1667 2.88634 17.1134 0.833008 14.5834 0.833008ZM10 14.583C7.47004 14.583 5.41671 12.5297 5.41671 9.99967C5.41671 7.46967 7.47004 5.41634 10 5.41634C12.53 5.41634 14.5834 7.46967 14.5834 9.99967C14.5834 12.5297 12.53 14.583 10 14.583ZM14.9042 5.98467C14.4 5.98467 13.9875 5.57217 13.9875 5.06801C13.9875 4.56384 14.4 4.15134 14.9042 4.15134C15.4084 4.15134 15.8209 4.56384 15.8209 5.06801C15.8209 5.57217 15.4084 5.98467 14.9042 5.98467Z"
+                fill="white" />
+              <path
+                d="M10 12.75C11.5188 12.75 12.75 11.5188 12.75 10C12.75 8.48122 11.5188 7.25 10 7.25C8.48122 7.25 7.25 8.48122 7.25 10C7.25 11.5188 8.48122 12.75 10 12.75Z"
+                fill="white" />
+            </svg>
+          </button>
+          <button type="button"
+            class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+            style="height: 46px; width: 46px; background: rgb(38, 38, 38)">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.9088 7.93206L17.7326 0H16.1156L10.1905 6.8873L5.45819 0H0L7.15622 10.4148L0 18.7328H1.6171L7.87413 11.4596L12.8718 18.7328H18.33L10.9084 7.93206H10.9088ZM8.69399 10.5066L7.96892 9.46949L2.19977 1.21733H4.68354L9.33932 7.87709L10.0644 8.91417L16.1163 17.5708H13.6326L8.69399 10.507V10.5066Z"
+                fill="white" />
+            </svg>
+          </button>
+          <button type="button"
+            class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+            style="height: 46px; width: 46px; background: rgb(38, 38, 38)">
+            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.1425 1.58773C20.3484 0.64371 18.8822 0.258667 16.0821 0.258667H5.9177C3.05353 0.258667 1.56247 0.668589 0.771332 1.67363C0 2.65349 0 4.09732 0 6.09567V9.90442C0 13.7758 0.915191 15.7414 5.9177 15.7414H16.0821C18.5104 15.7414 19.8559 15.4016 20.7264 14.5685C21.6191 13.7142 22 12.3193 22 9.90442V6.09567C22 3.98827 21.9403 2.53592 21.1425 1.58773ZM14.1241 8.52586L9.50847 10.9381C9.40702 10.9912 9.29424 11.0188 9.17976 11.0188C8.99154 11.0188 8.81104 10.944 8.67796 10.8109C8.54487 10.6779 8.4701 10.4974 8.47009 10.3091V5.50008C8.47009 5.37819 8.50148 5.25836 8.56125 5.15212C8.62102 5.04589 8.70713 4.95685 8.81131 4.89356C8.91548 4.83028 9.0342 4.79489 9.15602 4.79082C9.27785 4.78674 9.39866 4.81411 9.50684 4.87029L14.1225 7.267C14.2377 7.3268 14.3343 7.41705 14.4018 7.52795C14.4692 7.63884 14.505 7.76612 14.5052 7.89593C14.5054 8.02574 14.4699 8.15311 14.4027 8.26418C14.3355 8.37525 14.2391 8.46576 14.1241 8.52586Z"
+                fill="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container-fluid px-0 main-section">
+    <section class="position-relative" style="
+        background: url(/src/images/photo_campus.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 220px;
+      ">
+      <div style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, rgba(0, 30, 67, 0.6) 0%, rgba(255, 195, 51, 0.6) 100%);
+          z-index: 1;
+        "></div>
+      <div
+        class="container d-flex align-items-center justify-content-between flex-md-nowrap flex-wrap gap-2 gap-md-4 w-100 position-relative"
+        style="height: 100%; z-index: 2">
+        <h3 class="text-white fw-bold mb-0" style="font-size: 40px;">
+          About Us
+        </h3>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 text-white">
+            <li class=" breadcrumb-item text-white fs-6 fw-semibold"><a class="text-white text-decoration-none"
+                href="#">Home</a></li>
+            <li class="breadcrumb-item active text-white fs-6 fw-semibold" aria-current="page">About Us
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <!-- About Us Section -->
+    <section class="bg-white" style="padding: 100px 0;">
+      <div class="container">
+        <div class="d-flex justify-content-between" style="gap: 80px">
+          <div class="d-none d-xl-flex flex-column justify-content-center align-items-center w-25">
+            <img src="/src/images/photo_1.jpg" alt="Photo 1" class="img-fluid rounded-pill" style="
+                  z-index: 2;
+                  height: 500px;
+                  min-width: 280px;
+                  object-fit: cover;
+                " />
+            <img src="/src/images/waves.png" alt="waves" class="img-thumbnails" style="margin-top: -36px; z-index: 1" />
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-start w-100 w-md-50">
+            <img src="/src/images/rocket.png" alt="rocket" class="img-fluid mb-3 d-none d-sm-block"
+              style="height: 150px; width: 150px" />
+            <h3 class="text-start fw-bold" style="font-size: 48px">
+              About Shri Bapuji Group of Education
+            </h3>
+            <div class="d-flex flex-column gap-2">
+              <p class="fw-normal fs-6 lh-base text-secondary">
+                Established with the vision of imparting value-based
+                education, Shri Bapuji Group of Education is dedicated to the
+                intellectual and spiritual growth of students.
+              </p>
+              <p class="fw-normal fs-6 lh-base text-secondary">
+                <span class="fw-medium">Mission:</span> To provide quality
+                education and instill strong moral values.Vision: To become a
+                center of excellence in professional and value education.
+              </p>
+              <p class="fw-normal fs-6 lh-base text-secondary">
+                <span class="fw-medium">Our Philosophy:</span> We believe in
+                "Education with Sanskaar." All hostel students participate in
+                daily Gayatri Yagya and Aarti. All students engage in Gayatri
+                Mantra writing to promote concentration, spirituality, and
+                discipline..
+              </p>
+              <p class="fw-normal fs-6 lh-base text-secondary">Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled.</p>
+            </div>
+          </div>
+
+
+
+          <div class="d-none d-xl-flex flex-column justify-content-center align-items-center w-25">
+            <img src="/src/images/triangles.png" alt="" srcset="" class="img-thumbnails" style="margin-bottom: 50px" />
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <img src="/src/images/fullwaves.png" alt="FullWaves" class="img-fluid" style="
+                    z-index: 1;
+                    height: auto;
+                    width: 200px;
+                    margin-bottom: -80px;
+                    margin-right: -100px;
+                  " />
+              <img src="/src/images/photo_campus.jpg" alt="" srcset="" class="img-fluid rounded-pill" style="
+                    z-index: 2;
+                    height: 350px;
+                    width: 220px;
+                    object-fit: cover;
+                  " />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="fw-normal fs-6 lh-base text-secondary">Lorem Ipsum is simply dummy text of the printing and
+            typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+            centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem
+            Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+            more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+            like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p class="fw-normal fs-6 lh-base text-secondary">Lorem Ipsum is simply dummy text of the printing and
+            typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+            centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem
+            Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+            more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+            like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Photo Gallery -->
+    <section class="" style="
+          padding: 100px 0;
+          background: url(/src/images/our_gallery_bg.png) no-repeat;
+          background-size: 100% 100%;
+          background-color:   rgba(246, 246, 246, 1);
+        ">
+      <div class="container mx-auto">
+        <h3 class="text-center fw-bold mb-3 mb-md-5" style="font-size: 48px">
+          Our Photo Gallery
+        </h3>
+
+        <!-- Photo Gallery Grid -->
+        <div class="row g-4">
+          <!-- Photo 1: Team Meeting -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card border-0 shadow-sm rounded-5 overflow-hidden mb-4"
+              style="border-bottom-left-radius: 0px !important">
+              <div class="position-relative">
+                <img src="/src/images/campus_road.jpg" class="card-img-top" alt="Team Meeting"
+                  style="height: 240px; object-fit: cover" />
+                <span
+                  class="badge bg-warning text-dark position-absolute top-0 start-0 py-3 px-5 rounded-0 fs-5 fw-medium"
+                  style="border-bottom-right-radius: 2rem !important">Team Meeting</span>
+              </div>
+            </div>
+            <div class="card border-0 shadow-sm rounded-5 overflow-hidden"
+              style="border-bottom-left-radius: 0px !important">
+              <div class="position-relative">
+                <img src="/src/images/hostel_life.jpg" class="card-img-top" alt="hostel life"
+                  style="height: 480px; object-fit: cover" />
+                <span
+                  class="badge bg-warning text-dark position-absolute top-0 start-0 py-3 px-5 rounded-0 fs-5 fw-medium"
+                  style="border-bottom-right-radius: 2rem !important">Hostel Life</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 d-none d-md-block">
+            <div class="card border-0 shadow-sm rounded-5 overflow-hidden mb-4"
+              style="border-bottom-left-radius: 0px !important">
+              <div class="position-relative">
+                <img src=" /src/images/classrooms.jpg " class="card-img-top" alt=" Classrooms "
+                  style="height: 360px; object-fit: cover" />
+                <span
+                  class="badge bg-warning text-dark position-absolute top-0 start-0 py-3 px-5 rounded-0 fs-5 fw-medium"
+                  style="border-bottom-right-radius: 2rem !important">Classrooms</span>
+              </div>
+            </div>
+            <div class="card border-0 shadow-sm rounded-5 overflow-hidden"
+              style="border-bottom-left-radius: 0px !important">
+              <div class="position-relative">
+                <img src=" /src/images/cultural_programs.jpg " class="card-img-top" alt=" cultural_programs "
+                  style="height: 360px; object-fit: cover" />
+                <span
+                  class="badge bg-warning text-dark position-absolute top-0 start-0 py-3 px-5 rounded-0 fs-5 fw-medium"
+                  style="border-bottom-right-radius: 2rem !important">Cultural Programs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 d-none d-lg-block">
+            <div class="card border-0 shadow-sm rounded-5 overflow-hidden mb-4"
+              style="border-bottom-left-radius: 0px !important">
+              <div class="position-relative">
+                <img src=" /src/images/college_lab.jpg " class="card-img-top" alt=" College Lab "
+                  style="height: 480px; object-fit: cover" />
+                <span
+                  class="badge bg-warning text-dark position-absolute top-0 start-0 py-3 px-5 rounded-0 fs-5 fw-medium"
+                  style="border-bottom-right-radius: 2rem !important">College Lab</span>
+              </div>
+            </div>
+            <div class="card border-0 shadow-sm rounded-5 overflow-hidden"
+              style="border-bottom-left-radius: 0px !important">
+              <div class="position-relative">
+                <img src=" /src/images/dance_function.jpg " class="card-img-top" alt=" Dance Function "
+                  style="height: 240px; object-fit: cover" />
+                <span
+                  class="badge bg-warning text-dark position-absolute top-0 start-0 py-3 px-5 rounded-0 fs-5 fw-medium"
+                  style="border-bottom-right-radius: 2rem !important">Dance Function</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+          <button class="btn rounded-pill px-3 me-0 fw-medium text-white" type=" button "
+            style="font-size: 18px; background-color: rgba(0, 30, 67, 1)">
+            View Full Gallery
+          </button>
+          <button class="btn rounded-circle" type=" button " style="background-color: rgba(0, 30, 67, 1)">
+            <svg width=" 18 " height=" 18 " viewBox=" 0 0 20 18 " fill=" none " xmlns=" http://www.w3.org/2000/svg ">
+              <path d=" M1 17L17 1H7.8 " stroke=" #fff " stroke-width=" 2 "></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--Admission Process -->
+    <section class="position-relative bg-white" style="padding: 100px 0;">
+      <div class="mx-auto container">
+        <h3 class="text-center fw-bold" style="font-size: 48px">
+          Admission Process
+        </h3>
+        <p class="text-center text-secondary mb-3 mb-md-5">
+          Follow the step-by-step process for admission to our institution.
+          Ensure you have all <br />
+          required documents ready for a smooth application experience.
+        </p>
+        <div class="row g-4">
+          <!-- <div class="swiper admissionProcess d-none">
+            <div class="swiper-wrapper pb-5">
+          <div class="swiper-slide">
+            <div class="p-3 p-md-4 text-dark rounded-4 h-100 admission-block"
+              style="background-color: rgba(255, 195, 51, 1);">
+              <h4 class="fs-2 fw-bold mb-4 pb-3 pb-md-4 border-secondary border-bottom">Admission
+                Steps</h4>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px;">01</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">
+                      Collect Application Form
+                      (Offline/Online)</h5>
+                    <p class="mb-0">Obtain the application form either online through our portal
+                      or offline from the
+                      admission office.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px;">02</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">
+                      Submit required documents</h5>
+                    <p class="mb-0">Attach all necessary documents with your completed
+                      application form and submit
+                      before the deadline.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px;">03</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">
+                      Appear for counselling/merit verification</h5>
+                    <p class="mb-0">Attend the counselling session as per schedule. Your
+                      documents and eligibility
+                      will be verified.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px;">04</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">
+                      Pay fees and confirm seat</h5>
+                    <p class="mb-0">Pay the required admission fees to confirm your seat in the
+                      program.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="p-3 p-md-4 text-white rounded-4 h-100 document-block"
+              style="background-color:rgba(0, 30, 67, 1);">
+              <h4 class="fs-2 fw-bold mb-4 pb-3 pb-md-4 border-white border-bottom text-white">
+                Documents Required
+              </h4>
+              <div class="list-group">
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16);">10th & 12th
+                  Marksheet</div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16);">Transfer
+                  Certificate (TC)
+                </div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16);">Aadhar Card
+                  (Original And
+                  Photocopy)</div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16);">Passport
+                  Size Photographs
+                </div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16);">Caste
+                  Certificate (If
+                  Applicable)</div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16);">Income
+                  Certificate (If
+                  Applicable)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+          <!-- Admission Steps -->
+          <div class="col-lg-6">
+            <div class="p-3 p-md-4 text-dark rounded-4 h-100 admission-block"
+              style="background-color: rgba(255, 195, 51, 1)">
+              <h4 class="fs-2 fw-bold mb-4 pb-3 pb-md-4 border-secondary border-bottom">
+                Admission Steps
+              </h4>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px">01</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">
+                      Collect Application Form (Offline/Online)
+                    </h5>
+                    <p class="mb-0">
+                      Obtain the application form either online through our
+                      portal or offline from the admission office.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px">02</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">Submit required documents</h5>
+                    <p class="mb-0">
+                      Attach all necessary documents with your completed
+                      application form and submit before the deadline.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px">03</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">
+                      Appear for counselling/merit verification
+                    </h5>
+                    <p class="mb-0">
+                      Attend the counselling session as per schedule. Your
+                      documents and eligibility will be verified.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 admission-block-item">
+                <div class="d-flex align-items-start gap-3">
+                  <span
+                    class="bg-white p-2 rounded-circle d-inline-flex justify-content-center align-items-center fw-bold fs-5 h-100 w-100"
+                    style="max-height: 48px; max-width: 48px">04</span>
+                  <div>
+                    <h5 class="fs-4 fw-bold">Pay fees and confirm seat</h5>
+                    <p class="mb-0">
+                      Pay the required admission fees to confirm your seat in
+                      the program.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Documents Required -->
+          <div class="col-lg-6">
+            <div class="p-3 p-md-4 text-white rounded-4 h-100 document-block"
+              style="background-color: rgba(0, 30, 67, 1)">
+              <h4 class="fs-2 fw-bold mb-4 pb-3 pb-md-4 border-white border-bottom text-white">
+                Documents Required
+              </h4>
+              <div class="list-group">
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16)">
+                  10th & 12th Marksheet
+                </div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16)">
+                  Transfer Certificate (TC)
+                </div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16)">
+                  Aadhar Card (Original And Photocopy)
+                </div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16)">
+                  Passport Size Photographs
+                </div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 mb-3 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16)">
+                  Caste Certificate (If Applicable)
+                </div>
+                <div class="list-group-item text-white border-0 border-4 border-start rounded-4 p-3 fs-5"
+                  style="background: rgba(255, 255, 255, 0.16)">
+                  Income Certificate (If Applicable)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="/src/images/admission_Process_img.png " alt=" " srcset=""
+          class="position-absolute img-fluid d-none d-lg-block" style="
+              height: auto;
+              width: 120px;
+              object-fit: contain;
+              left: 24px;
+              bottom: 48px;
+            " />
+      </div>
+    </section>
+
+  </main>
+  <footer class="position-relative overflow-hidden p-0">
+    <div class="container position-relative pt-5 pb-4">
+      <div class="row gy-4 align-items-center">
+        <!-- Left Section -->
+        <div class="col-lg-5 col-md-12">
+          <img src="/src/images/image.png" alt="Logo" class="mb-3" style="max-height: 50px" />
+          <p>
+            Empowering Future Through Quality Education with Values.<br />
+            Nurturing competent professionals and responsible citizens since
+            inception.
+          </p>
+          <div class="d-flex flex-row gap-3 my-3">
+            <button type="button"
+              class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+              style="
+                  height: 46px;
+                  width: 46px;
+                  background: rgba(255, 255, 255, 0.16);
+                ">
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.88805 10.1437H0.710047C0.358047 10.1437 0.248047 10.0117 0.248047 9.68168V7.01968C0.248047 6.66768 0.380047 6.55768 0.710047 6.55768H2.88805V4.62168C2.88805 3.74168 3.04205 2.90568 3.48205 2.13568C3.94405 1.34368 4.60405 0.815679 5.44005 0.507679C5.99005 0.30968 6.54005 0.22168 7.13405 0.22168H9.29005C9.59805 0.22168 9.73005 0.35368 9.73005 0.66168V3.16968C9.73005 3.47768 9.59805 3.60968 9.29005 3.60968C8.69605 3.60968 8.10205 3.60968 7.50805 3.63168C6.91405 3.63168 6.60605 3.91768 6.60605 4.53368C6.58405 5.19368 6.60605 5.83168 6.60605 6.51368H9.15805C9.51005 6.51368 9.64205 6.64568 9.64205 6.99768V9.65968C9.64205 10.0117 9.53205 10.1217 9.15805 10.1217H6.60605V17.2937C6.60605 17.6677 6.49605 17.7997 6.10005 17.7997H3.35005C3.02005 17.7997 2.88805 17.6677 2.88805 17.3377V10.1437Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <button type="button"
+              class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+              style="
+                  height: 46px;
+                  width: 46px;
+                  background: rgba(255, 255, 255, 0.16);
+                ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.5834 0.833008H5.41671C2.88671 0.833008 0.833374 2.88634 0.833374 5.41634V14.583C0.833374 17.113 2.88671 19.1663 5.41671 19.1663H14.5834C17.1134 19.1663 19.1667 17.113 19.1667 14.583V5.41634C19.1667 2.88634 17.1134 0.833008 14.5834 0.833008ZM10 14.583C7.47004 14.583 5.41671 12.5297 5.41671 9.99967C5.41671 7.46967 7.47004 5.41634 10 5.41634C12.53 5.41634 14.5834 7.46967 14.5834 9.99967C14.5834 12.5297 12.53 14.583 10 14.583ZM14.9042 5.98467C14.4 5.98467 13.9875 5.57217 13.9875 5.06801C13.9875 4.56384 14.4 4.15134 14.9042 4.15134C15.4084 4.15134 15.8209 4.56384 15.8209 5.06801C15.8209 5.57217 15.4084 5.98467 14.9042 5.98467Z"
+                  fill="white" />
+                <path
+                  d="M10 12.75C11.5188 12.75 12.75 11.5188 12.75 10C12.75 8.48122 11.5188 7.25 10 7.25C8.48122 7.25 7.25 8.48122 7.25 10C7.25 11.5188 8.48122 12.75 10 12.75Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <button type="button"
+              class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+              style="
+                  height: 46px;
+                  width: 46px;
+                  background: rgba(255, 255, 255, 0.16);
+                ">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.9088 7.93206L17.7326 0H16.1156L10.1905 6.8873L5.45819 0H0L7.15622 10.4148L0 18.7328H1.6171L7.87413 11.4596L12.8718 18.7328H18.33L10.9084 7.93206H10.9088ZM8.69399 10.5066L7.96892 9.46949L2.19977 1.21733H4.68354L9.33932 7.87709L10.0644 8.91417L16.1163 17.5708H13.6326L8.69399 10.507V10.5066Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <button type="button"
+              class="btn btn-secondary rounded-circle p-2 d-flex align-items-center justify-content-center border-0"
+              style="
+                  height: 46px;
+                  width: 46px;
+                  background: rgba(255, 255, 255, 0.16);
+                ">
+              <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.1425 1.58773C20.3484 0.64371 18.8822 0.258667 16.0821 0.258667H5.9177C3.05353 0.258667 1.56247 0.668589 0.771332 1.67363C0 2.65349 0 4.09732 0 6.09567V9.90442C0 13.7758 0.915191 15.7414 5.9177 15.7414H16.0821C18.5104 15.7414 19.8559 15.4016 20.7264 14.5685C21.6191 13.7142 22 12.3193 22 9.90442V6.09567C22 3.98827 21.9403 2.53592 21.1425 1.58773ZM14.1241 8.52586L9.50847 10.9381C9.40702 10.9912 9.29424 11.0188 9.17976 11.0188C8.99154 11.0188 8.81104 10.944 8.67796 10.8109C8.54487 10.6779 8.4701 10.4974 8.47009 10.3091V5.50008C8.47009 5.37819 8.50148 5.25836 8.56125 5.15212C8.62102 5.04589 8.70713 4.95685 8.81131 4.89356C8.91548 4.83028 9.0342 4.79489 9.15602 4.79082C9.27785 4.78674 9.39866 4.81411 9.50684 4.87029L14.1225 7.267C14.2377 7.3268 14.3343 7.41705 14.4018 7.52795C14.4692 7.63884 14.505 7.76612 14.5052 7.89593C14.5054 8.02574 14.4699 8.15311 14.4027 8.26418C14.3355 8.37525 14.2391 8.46576 14.1241 8.52586Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="/courseList.html">Courses</a></li>
+            <li><a href="/facilities.html">Facilities</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/about_us.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Links -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5>Support</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="/faqs.html">FAQs</a></li>
+            <li><a href="/contact_us.html">Contact Us</a></li>
+            <li><a href="termsAndcondition.html">Terms & Conditions</a></li>
+            <li><a href="/privacy_policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-lg-8 col-md-12 z-2">
+          <h5>Subscribe To Our Newsletter</h5>
+          <form class="d-flex subscribe-input mt-3 bg-transparent border border-1 rounded-pill overflow-hidden p-1">
+            <input type="email"
+              class="text-white outline-none form-control me-2 bg-transparent rounded-pill border-0 fs-5"
+              placeholder="Email Address" required />
+            <button class="btn btn-subscribe rounded-pill"
+              style="padding: 12px 24px; font-size: 18px; width: max-content" type="submit">
+              Subscribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4" />
+
+      <div class="text-center">
+        <p class="mb-0">
+          © 2025 Shri Bapuji Group of Education, Ladnun. All Rights Reserved.
+        </p>
+      </div>
+
+      <img src="/src/images/footer_image.png" class="position-absolute img-fluid d-none d-lg-block" alt="" srcset=""
+        style="width: 280px; height: auto; bottom: 0; right: 0; z-index: 1" />
+    </div>
+    <img src="/src/images/footer_left.png" alt="" class="position-absolute img-fluid d-none d-lg-block"
+      style="left: -23%; bottom: -23%; transform: translate(23%, 23%)" />
+    <img src="/src/images/footer_right.png" alt="" class="position-absolute img-fluid"
+      style="right: 0; bottom: 0; max-width: 500px" />
+  </footer>
+</body>
+
+</html>
